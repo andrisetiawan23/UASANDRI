@@ -1,6 +1,6 @@
 package com.example.themoviedb.service
 
-import android.telecom.Call
+import retrofit2.Call
 import com.example.themoviedb.model.MovieResponse
 import retrofit2.http.GET
 
