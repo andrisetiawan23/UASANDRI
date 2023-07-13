@@ -22,13 +22,13 @@
             android:id="@+id/tv_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zuriatul khairi" />
+            android:text="Andri Setiawan" />
 
         <TextView
             android:id="@+id/tv_umur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2110031802108" />
+            android:text="2110031802092" />
 
 
     </LinearLayout>
