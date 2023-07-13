@@ -1,18 +1,17 @@
 package com.example.themoviedb
 
+import Movie
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
-import com.example.themoviedb.model.Movie
-import kotlinx.android.synthetic.main.activity_movie_detail.tv_item_desc
-import kotlinx.android.synthetic.main.activity_tvdetail.img_item_photo
-import kotlinx.android.synthetic.main.activity_tvdetail.tv_item_name
+import kotlinx.android.synthetic.main.activity_movie_detail.*
+
 
 class MovieDetailActivity : AppCompatActivity() {
-
     companion object {
         const val EXTRA_MOVIES = "extra_movies"
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
@@ -21,17 +20,17 @@ class MovieDetailActivity : AppCompatActivity() {
 
         img_item_photo.clipToOutline = true
 
-        val detailMovie = intent.getParcelableArrayExtra<Movie>(EXTRA_MOVIES)
+        val detailMovies = intent.getParcelableExtra<Movie>(EXTRA_MOVIES)
 
-        if (detailMovie != null) {
-            val IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
-            Glide.with(this).load(IMAGE_BASE+detailMovies.poster).into(img_item_photo)
+        if (detailMovies != null){
+            val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
+            Glide.with(this).load(IMAGE_BASE + detailMovies.poster).into(img_item_photo)
             tv_item_name.text = detailMovies.title
             tv_item_desc.text = detailMovies.overview
 
-            }
         }
 
+    }
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

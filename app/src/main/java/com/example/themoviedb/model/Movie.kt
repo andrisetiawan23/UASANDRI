@@ -1,13 +1,11 @@
-package com.example.themoviedb.model
-
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Movie (
+data class Movie(
     @SerializedName("id")
-    val id : String?,
+    val id : String ?,
 
     @SerializedName("title")
     val title : String?,
@@ -16,8 +14,8 @@ data class Movie (
     val poster : String?,
 
     @SerializedName("overview")
-    val overview : String?,
+    val overview : String?
 
-    ) : Parcelable {
-        constructor(): this("","","","")
-    }
+) : Parcelable{
+    constructor() : this("", "", "", "")
+}

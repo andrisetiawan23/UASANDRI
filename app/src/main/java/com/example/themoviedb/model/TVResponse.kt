@@ -4,11 +4,13 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
+
 @Parcelize
-class TVResponse (
-    @SerializedName("result")
+data class TVResponse(
+    @SerializedName("results")
     val tv : List<TV>
 
 ) : Parcelable {
-    constructor(): this(mutableListOf())
+    constructor() : this(mutableListOf())
 }
+

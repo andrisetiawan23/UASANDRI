@@ -5,19 +5,19 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class TV (
+data class TV(
     @SerializedName("id")
-    val id : String?,
+    val id : String ?,
 
-    @SerializedName("title")
+    @SerializedName("name")
     val title : String?,
 
     @SerializedName("poster_path")
     val poster : String?,
 
     @SerializedName("overview")
-    val overview : String?,
+    val overview : String?
 
-    ) : Parcelable {
-        constructor(): this("","","","")
+) : Parcelable {
+    constructor() : this("", "", "", "")
 }
